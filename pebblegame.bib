@@ -1,0 +1,83 @@
+@thesis{chanPebbleGamesComplexity2013,
+  title = {Pebble {{Games}} and {{Complexity}}},
+  author = {Chan, Siu Man},
+  date = {2013},
+  institution = {UC Berkeley},
+  url = {https://escholarship.org/uc/item/8dq8k8fw},
+  urldate = {2024-05-09},
+  abstract = {We study the connection between pebble games and complexity.First, we derive complexity results using pebble games.It is shown that three pebble games used for studying computational complexity are equivalent: namely, the two-person pebble game of Dymond-Tompa, the two-person pebble game of Raz-McKenzie, and the one-person reversible pebble game of Bennett have the same pebble costs over any directed acyclic graph.The three pebble games have been used for studying parallel complexity and for proving lower bounds under restricted settings, and we show one more such lower bound on circuit-depth.Second, the pebble costs are applied to proof complexity.Concerning a family of unsatisfiable CNFs called pebbling contradictions, the pebble cost in any of the pebble games controls the scaling of some parameters of resolution refutations.Namely, the pebble cost controls the minimum depth of resolution refutations and the minimum size of tree-like resolution refutations.Finally, we study the space complexity of computing the pebble costs and of computing the minimum depth of resolution refutations.It is PSPACE-complete to compute the pebble cost in any of the three pebble games, and to compute the minimum depth of resolution refutations.},
+  langid = {english},
+  file = {/Users/exaclior_laptop/Zotero/storage/ULUAZI72/Chan - 2013 - Pebble Games and Complexity.pdf}
+}
+
+@online{kornerupTightBoundsSpooky2024,
+  title = {Tight {{Bounds}} on the {{Spooky Pebble Game}}: {{Recycling Qubits}} with {{Measurements}}},
+  shorttitle = {Tight {{Bounds}} on the {{Spooky Pebble Game}}},
+  author = {Kornerup, Niels and Sadun, Jonathan and Soloveichik, David},
+  date = {2024-02-06},
+  eprint = {2110.08973},
+  eprinttype = {arxiv},
+  eprintclass = {quant-ph},
+  url = {http://arxiv.org/abs/2110.08973},
+  urldate = {2024-05-09},
+  abstract = {Pebble games are popular models for analyzing time-space trade-offs. In particular, reversible pebble game strategies are frequently applied in quantum algorithms like Grover’s search to efficiently simulate classical computation on inputs in superposition, as unitary operations are fundamentally reversible. However, the reversible pebble game cannot harness the additional computational power granted by intermediate measurements, which are irreversible. The spooky pebble game, which models interleaved Hadamard basis measurements and adaptive phase corrections, reduces the number of qubits beyond what purely reversible approaches can achieve. While the spooky pebble game does not reduce the total space (bits plus qubits) complexity of the simulation, it reduces the amount of space that must be stored in qubits. We prove asymptotically tight trade-offs for the spooky pebble game on a line with any pebble bound. This in turn gives a tight time-qubit tradeoff for simulating arbitrary classical sequential computation when using the spooky pebble game. For example, for all ε ∈ (0, 1], any classical computation requiring time T and space S can be implemented on a quantum computer using only O(T /ε) gates and O(T εS1−ε) qubits. This improves on the best known bound for the reversible pebble game with that number of qubits, which uses O(21/εT ) gates. For smaller space bounds, we show that the spooky pebble game can simulate arbitrary computation with O(T 1+εS−ε/ε) gates and O(S/ε) qubits whereas any simulation via the reversible pebble game requires Ω(S · (1 + log(T /S))) qubits.},
+  langid = {english},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computational Complexity,Quantum Physics},
+  file = {/Users/exaclior_laptop/Zotero/storage/CUUU2U38/Kornerup et al. - 2024 - Tight Bounds on the Spooky Pebble Game Recycling .pdf}
+}
+
+@article{liuRedBlueStandardPebble,
+  title = {Red-{{Blue}} and {{Standard Pebble Games}}: {{Complexity}} and {{Applications}} in the {{Sequential}} and {{Parallel Models}}},
+  author = {Liu, Quanquan},
+  langid = {english},
+  file = {/Users/exaclior_laptop/Zotero/storage/M8GWQST5/Liu - Red-Blue and Standard Pebble Games Complexity and.pdf}
+}
+
+@article{marchalPartPebblegameModels,
+  title = {Part 1. {{Pebble-game}} Models},
+  author = {Marchal, Loris},
+  langid = {english},
+  file = {/Users/exaclior_laptop/Zotero/storage/5M9IHIA3/Marchal - Part 1. Pebble-game models.pdf}
+}
+
+@online{quistTradeoffsClassicalQuantum2024,
+  title = {Trade-Offs between Classical and Quantum Space Using Spooky Pebbling},
+  author = {Quist, Arend-Jan and Laarman, Alfons},
+  date = {2024-01-19},
+  eprint = {2401.10579},
+  eprinttype = {arxiv},
+  eprintclass = {quant-ph},
+  url = {http://arxiv.org/abs/2401.10579},
+  urldate = {2024-05-09},
+  abstract = {Pebble games are used to study space/time trade-offs. Recently, spooky pebble games were introduced to study classical space / quantum space / time trade-offs for simulation of classical circuits on quantum computers. In this paper, the spooky pebble game framework is applied for the first time to general circuits. Using this framework we prove an upper bound for quantum space in the spooky pebble game. We also prove that solving the spooky pebble game is PSPACE-complete. Moreover, we present a solver for the spooky pebble game based on satisfiability combined with heuristic solvers. This spooky pebble game solver was empirically evaluated by calculating optimal classical space / quantum space / time trade-offs. Within limited runtime, the solver could find a strategy reducing quantum space when classical space is taken into account, showing that the spooky pebble model is useful to reduce quantum space.},
+  langid = {english},
+  pubstate = {preprint},
+  keywords = {Quantum Physics},
+  file = {/Users/exaclior_laptop/Zotero/storage/JA2QEXFU/Quist and Laarman - 2024 - Trade-offs between classical and quantum space usi.pdf}
+}
+
+@inproceedings{sethiCompleteRegisterAllocation1973,
+  title = {Complete Register Allocation Problems},
+  booktitle = {Proceedings of the Fifth Annual {{ACM}} Symposium on {{Theory}} of Computing},
+  author = {Sethi, Ravi},
+  date = {1973-04-30},
+  series = {{{STOC}} '73},
+  pages = {182--195},
+  publisher = {Association for Computing Machinery},
+  location = {New York, NY, USA},
+  doi = {10.1145/800125.804049},
+  url = {https://dl.acm.org/doi/10.1145/800125.804049},
+  urldate = {2024-05-08},
+  abstract = {The search for efficient algorithms for register allocation dates back to the time of the first Fortran compiler for the IBM 704. Since then, many variants of the problem have been considered; depending on two factors: (1) the particular model for registers, and (2) the definition of the term “computation of a program” e.g. whether values may be computed more than once. We will show that several variants of the register allocation problem for straight line programs are polynomial complete. In particular we consider, (1) the case when each value is computed exactly once, and (2) the case when values may be recomputed as necessary. The completeness of the third problem considered is surprising. A straight line program starts with a set of initial values, and computes intermediate and final values. Suppose, for each value, the register that value must be computed into is preassigned. Then, (3) the problem of determining if there is a computation of the straight line program, that computes values into the assigned registers, is polynomial complete.},
+  isbn = {978-1-4503-7430-9},
+  keywords = {Dag,Polynomial complete,Program optimization,Register allocation,Straight line program},
+  file = {/Users/exaclior_laptop/Zotero/storage/TRNRB2FB/Sethi - 1973 - Complete register allocation problems.pdf}
+}
+
+@online{SpookyPebbleGamesa,
+  title = {Spooky {{Pebble Games}} and {{Irreversible Uncomputation}}},
+  url = {https://algassert.com/post/1905},
+  urldate = {2024-05-09},
+  file = {/Users/exaclior_laptop/Zotero/storage/MNKXQV2D/1905.html}
+}

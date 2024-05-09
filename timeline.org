@@ -1,0 +1,84 @@
+#+title: Timeline of Pebble Game for analyzing the space-time complexity of Computer Program
+#+author: Yusheng Zhao
+#+options: toc:nil
+#+date: today
+
+* Purpose
+Over the time of 1988 to 2004, the speed of computation has improved around 58
+percent yearly while memory bandwidth and latency have only improved 26% and 5%
+[[cite:&marchalPartPebblegameModels]]. The ever increasing gap between computation
+power and data acquisition bottlenecks actual computation. Without hardware
+improvement for data acquisition, it is desirable to optimize computational
+steps by shuffling computation order.
+
+The pebble game is a tool to analyze such space-time complexity of a computer
+program.
+
+* Black Pebble Game
+Originally, (black) pebble game was introduced in
+[[cite:&sethiCompleteRegisterAllocation1973]] to study the time-space complexity
+trade off of evaluating a piece of straight-line program. A straight-line
+program is one without branch or loops. A pebble game converts such a
+straight-line program into a directed acyclic graph. Gates in the program are
+represented by vertices. Vertex A has an outgoing edge into vertex B if the
+output of the gate represented by vertex A is the input of the gate represented
+by gate B. Final results of a program is represented by vertices with no
+outgoing edges. Pebbling a vertex represents computation of a gate. The goal of
+the game is to pebble all output vertices at least once each while following
+some constraints and with as few pebbles existing simultaneously as possible and
+as few pebble operations as possible. In the original pebble, there are two
+constraints for pebbling and unpebbling.
+
+To pebble a vertex, all vertices with outgoing edge towards the vertex needs to
+be pebbled already. To unpebble a vertex, the vertex must be already pebbled.
+The vertices representing the inputs can be pebbled with no constraint.
+
+For example, [[cite:&marchalPartPebblegameModels]] gives the pebble game setup of
+the computation $7 + (5 − z) × (1 + x) − (1 + x − t)/(2 + z) + v$ as follows [[file:resources/Screenshot 2024-05-09 at
+ 20.15.04.png][pebble game example]].
+
+** Optimal Strategy
+In original paper [[cite:&sethiCompleteRegisterAllocation1973]], it was proven that
+the optimal strategy for pebble game is an NP-complete problem. Therefore, the
+state of the art solution will be provided by first converting a pebble game
+into a SAT problem and then using a SOTA solve for SAT problem documented in
+[[https://en.wikipedia.org/wiki/SAT_solver][Wikipedia]].
+
+If however, the DAG in the pebble game is of specific format such as a tree,
+special algorithm will apply.
+
+** Variants
+- What are their each complexity.
+- Progressive Pebble Game
+
+*** Dymond and Tompa Pebble Game
+For modeling the time and space complexity of parallel computing
+[[cite:&liuRedBlueStandardPebble]].
+
+*** Red Black Pebble Game
+red-blue pebble game is used to study I/O complexity. [[cite:&liuRedBlueStandardPebble]]
+
+*** Reversible Pebble Game
+For modeling reversible computing.
+
+*** Black White Pebble Game
+For modeling non-deterministic computing.
+* Reversible Pebble Game
+What is the state of the art?
+What is the con
+
+
+* Spooky Pebble Game
+Why this?
+What is the state of the art?
+
+* What remains
+- Non-line program? what are the model for
+
+* Bibliography
+** References
+   :PROPERTIES:
+   :beamer_opt: allowframebreaks
+   :END:
+   bibliographystyle:apalike
+   [[bibliography:./pebblegame.bib][bibliography:./pebblegame.bib]]
