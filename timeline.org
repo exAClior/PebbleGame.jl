@@ -46,7 +46,9 @@ into a SAT problem and then using a SOTA solve for SAT problem documented in
 
 If however, the DAG in the pebble game is of specific format such as a tree,
 special algorithm will apply.
-
+*** Completely Balanced Tree
+If the DAG of the program is a completely balanced tree of level $k$, we may use
+recursive proof to derive the lower bound on memory used being $k+1$ pebbles.
 ** Variants
 - What are their each complexity.
 - Progressive Pebble Game
@@ -74,6 +76,21 @@ What is the state of the art?
 
 * What remains
 - Non-line program? what are the model for
+
+* Appendix
+** PSPACE
+To investigate complexity of a problem $\mathcal{Q}$ under the physical constraint of
+limited physical space, we propose a new complexity class $SPACE(f(n))$.
+Problems in $SPACE(f(n))$ can be solved by a bounded-memory $Random Access
+Machine$ model with read-only access to the input of a problem and $O(f(n))$
+amount of memory [[cite:&mooreNatureComputation2011]]. A bounded-memory $Random
+Access Machine$ model is one where there exists two components, A CPU and a
+Random Access Memory. A CPU can request data from arbitrary address $adr$ and
+execute command upon receiving data. A $Random Access Memory$ can accept an
+address request and output data in $O(1)$ time.
+
+$PSPACE$ is the complexity class of a the collection $SPACE(n^c)$ for $0<= c <=
+\inf$.
 
 * Bibliography
 ** References
