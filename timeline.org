@@ -68,33 +68,48 @@ allowed in this model is limited and it corresponds to irreversible and
 straight-line programs. Are there any variants of pebble games that could be
 used to analyze other computational models?
 
-*** Optimal Space-Time Strategy
-If however, the DAG in the pebble game is of specific format such as a tree,
-special algorithm will apply.
-
 *** DAG with structure
+
 For results regarding DAG with structure, a collection of results regarding DAG
 for FFT, DFT, and etc are recorded in Chapter 10 of
 [[cite:&ModelsComputationExploring]]. One example is: if the DAG of the program is a
 completely balanced tree of level $k$, we may use recursive proof to derive the
 lower bound on memory used being $k+1$ pebbles.
 
-** Variants
+*** Space-Time Trade Off
+If however, the DAG in the pebble game is of specific format such as a tree,
+special algorithm will apply.
+
+*** TODO Next
+- [[https://arxiv.org/pdf/1307.3913][Section 1.2]] Reversible pebblings have been studied in [LV96, Kr´a04, KSS18]
+  and have been used to prove timespace trade-offs in reversible simulation of
+  irreversible computation in [LTV98, LMT00, Wil00, BTV01]. In a different
+  context, Potechin [Pot10] implicitly used reversible pebbling to
+obtain lower bounds in monotone space complexity, with the connection made
+explicit in later works [CP14, FPRC13]. The paper [CLNV15] (to which this
+overview is indebted) studied the relative power of standard and reversible
+pebblings with respect to space, and also established PSPACE-hardness results
+for estimating the minimum space required to pebble graphs (reversibly or not)
+- https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0,5&cites=13901390982843745322&scipsc=&q=&scisbd=1
+*** Variants
 - What are their each complexity.
 - Progressive Pebble Game
 
-*** Dymond and Tompa Pebble Game
+**** Dymond and Tompa Pebble Game
 For modeling the time and space complexity of parallel computing
 [[cite:&liuRedBlueStandardPebble]].
 
-*** Red Black Pebble Game
-red-blue pebble game is used to study I/O complexity. [[cite:&liuRedBlueStandardPebble]]
+**** Red Black Pebble Game
+Red-blue pebble game is used to study I/O complexity. In the thesis
+[[cite:&liuRedBlueStandardPebble]], addative complexity was also shown to be
+PSPACE-hard.
 
-*** Reversible Pebble Game
+**** Reversible Pebble Game
 For modeling reversible computing.
 
-*** Black White Pebble Game
+**** Black White Pebble Game
 For modeling non-deterministic computing.
+
 * Reversible Pebble Game
 What is the state of the art?
 What is the con
@@ -123,6 +138,19 @@ address request and output data in $O(1)$ time.
 $PSPACE$ is the complexity class of a the collection $SPACE(n^c)$ for $0<= c <=
 \inf$.
 
+** Other usecases
+Besides studying of space-time complexity in computation. Pebble game model has
+also seen its usage in many other fields. I merely list them here without
+understanding much.
+- [[https://arxiv.org/pdf/2001.02481][Nullstellensatz Size-Degree Trade-offs from Reversible Pebbling]] is about proof
+  complexity
+- [[https://arxiv.org/pdf/1802.07433][Static-Memory-Hard Functions and Nonlinear Space-Time
+Tradeoffs via Pebbling]] is about cryptography, hash-function.
+- [[http://kth.diva-portal.org/smash/get/diva2:1094244/FULLTEXT01.pdf][Proof system thesis]]: resources required for a propositional proof system and
+  [[https://arxiv.org/pdf/1307.3913][paper]] , [[https://arxiv.org/pdf/1307.3913][paper2]] too.
+
+** People
+- [[https://jakobnordstrom.se/][Jakob Nordstorm]]
 * Bibliography
 ** References
    :PROPERTIES:
