@@ -81,7 +81,7 @@ general[[cite:&tompaTimespaceTradeoffsComputing1980]] are recorded in Chapter 10
 completely balanced tree of level $k$, we may use recursive proof to derive the
 lower bound on memory used being $k+1$ pebbles.
 
-*** Space-Time Trade Off
+*** Space-Time Trade Off (needs revisit)
 Noting that space is not the only important resource, it is also interesting to
 study the time and space trade off with pebble game framework. The first
 interesting work is done in [[cite:&pippengerTimeSpaceTradeOff1978]]. There are two
@@ -93,21 +93,23 @@ previously proposed in [[cite:&hopcroftTimeSpace1977]]. Previous work didn't sho
 such sacrifice in time. The problems is that this lower bound is too far away
 from the $\mathcal{O}(V/log(V))$ upper bound.
 
-What are the work that push this upper bound?
+Two natrual question follows are: What are the work that closes the two bounds?
+Are there any graph to which the $\mathcal{O}V/log(V)$ memory is necessary? The first
+problem is answered in
+[[cite:&lengauerAsymptoticallyTightBounds1982;&lengauerUpperLowerBounds1979]]. No
+one seems to be following it. The second one is answered in
+[[cite:&paulSpaceBoundsGame1976;&CorrectionSpaceBounds1977]]. In
+[[cite:&paulSpaceBoundsGame1976]], an algorithm for solving the pebbling problem is
+also given.
 
-Take a look at Chapter 10 in [[cite:&kapronLogicAutomataComputational2023]]. Take a
-look at page 407 in [[cite:&pippengerAdvancesPebbling1982]]
+A more theory of computation related review was given in section 2 of chapter 10
+in [[cite:&kapronLogicAutomataComputational2023]].
+
+*** Approximation of answer
+- [[https://link.springer.com/chapter/10.1007/978-3-319-62127-2_27]]
+- [[https://ieeexplore.ieee.org/document/7354410]]
 
 *** TODO Next
-- [[https://arxiv.org/pdf/1307.3913][Section 1.2]] Reversible pebblings have been studied in [LV96, Kr´a04, KSS18]
-  and have been used to prove timespace trade-offs in reversible simulation of
-  irreversible computation in [LTV98, LMT00, Wil00, BTV01]. In a different
-  context, Potechin [Pot10] implicitly used reversible pebbling to
-obtain lower bounds in monotone space complexity, with the connection made
-explicit in later works [CP14, FPRC13]. The paper [CLNV15] (to which this
-overview is indebted) studied the relative power of standard and reversible
-pebblings with respect to space, and also established PSPACE-hardness results
-for estimating the minimum space required to pebble graphs (reversibly or not)
 - https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0,5&cites=13901390982843745322&scipsc=&q=&scisbd=1
 *** Variants
 - What are their each complexity.
