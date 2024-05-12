@@ -42,6 +42,7 @@ There are multiple types of optimal strategy for pebble game. We discuss them
 separately.
 
 *** Miminal Space Stragey
+
 In a series of paper
 [[cite:&sethiCompleteRegisterAllocation1973;&louiMinimumRegisterAllocation1979;&gilbertPebblingProblemComplete1980]],
 better understanding was developed on the complexity class of minimal space
@@ -54,6 +55,9 @@ SOTA solve for SAT problem documented in [[https://en.wikipedia.org/wiki/SAT_sol
 pebbles needed for the pebble game on a DAG, it was shown that it is in
 $PSPACE-complete$ complexity class
 [[cite:&louiMinimumRegisterAllocation1979;&gilbertPebblingProblemComplete1979]].
+Finally, it was established that arbitrary DAG will always have a strategy using
+$\mathcal{O}(V/log(V))$ pebbles in
+[[cite:&hopcroftTimeSpace1977;&pippengerTimeSpaceTradeOff1978]].
 
 In conclusion, we now understand that asking about the minimal space for
 carrying out a computation is hard, $PSAPCE-complete$ hard. Nevertheless, there
@@ -71,14 +75,28 @@ used to analyze other computational models?
 *** DAG with structure
 
 For results regarding DAG with structure, a collection of results regarding DAG
-for FFT, DFT, and etc are recorded in Chapter 10 of
+for FFT [[cite:&savageSpacetimeTradeoffsFFT1978]], DFT, and functions in
+general[[cite:&tompaTimespaceTradeoffsComputing1980]] are recorded in Chapter 10 of
 [[cite:&ModelsComputationExploring]]. One example is: if the DAG of the program is a
 completely balanced tree of level $k$, we may use recursive proof to derive the
 lower bound on memory used being $k+1$ pebbles.
 
 *** Space-Time Trade Off
-If however, the DAG in the pebble game is of specific format such as a tree,
-special algorithm will apply.
+Noting that space is not the only important resource, it is also interesting to
+study the time and space trade off with pebble game framework. The first
+interesting work is done in [[cite:&pippengerTimeSpaceTradeOff1978]]. There are two
+important assumptions: he didn't consider the commuting property of expressions
+and he assumed all operation takes the same amount of time. He obtained the
+result that some graph will need to pay at a lower bound $\Omega(Vloglog(V))$ amount
+of time in order to achieve the $O(V/log(V))$ best general space complexity
+previously proposed in [[cite:&hopcroftTimeSpace1977]]. Previous work didn't shown
+such sacrifice in time. The problems is that this lower bound is too far away
+from the $\mathcal{O}(V/log(V))$ upper bound.
+
+What are the work that push this upper bound?
+
+Take a look at Chapter 10 in [[cite:&kapronLogicAutomataComputational2023]]. Take a
+look at page 407 in [[cite:&pippengerAdvancesPebbling1982]]
 
 *** TODO Next
 - [[https://arxiv.org/pdf/1307.3913][Section 1.2]] Reversible pebblings have been studied in [LV96, Kr´a04, KSS18]
