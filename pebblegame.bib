@@ -16,6 +16,22 @@
   file = {/home/exaclior/Zotero/storage/AWTJX6ZZ/Aho and Ullman - 1972 - Optimization of Straight Line Programs.pdf}
 }
 
+@inproceedings{chanHardnessApproximationPSPACE2015,
+  title = {Hardness of {{Approximation}} in {{PSPACE}} and {{Separation Results}} for {{Pebble Games}}},
+  booktitle = {2015 {{IEEE}} 56th {{Annual Symposium}} on {{Foundations}} of {{Computer Science}}},
+  author = {Chan, Siu Man and Lauria, Massimo and Nordstrom, Jakob and Vinyals, Marc},
+  date = {2015-10},
+  pages = {466--485},
+  issn = {0272-5428},
+  doi = {10.1109/FOCS.2015.36},
+  url = {https://ieeexplore.ieee.org/document/7354410},
+  urldate = {2024-05-12},
+  abstract = {We consider the pebble game on DAGs with bounded fan-in introduced in [Paterson and Hewitt '70] and the reversible version of this game in [Bennett '89], and study the question of how hard it is to decide exactly or approximately the number of pebbles needed for a given DAG in these games. We prove that the problem of deciding whether s pebbles suffice to reversibly pebble a DAG G is PSPACE-complete, as was previously shown for the standard pebble game in [Gilbert, Lengauer and Tarjan '80]. Via two different graph product constructions we then strengthen these results to establish that both standard and reversible pebbling space are PSPACE-hard to approximate to within any additive constant. To the best of our knowledge, these are the first hardness of approximation results for pebble games in an unrestricted setting (even for polynomial time). Also, since [Chan '13] proved that reversible pebbling is equivalent to the games in [Dymond and Tompa '85] and [Raz and McKenzie '99], our results apply to the Dymond – Tompa and Raz – McKenzie games as well, and from the same paper it follows that resolution depth is PSPACE-hard to determine up to any additive constant. We also obtain a multiplicative logarithmic separation between reversible and standard pebbling space. This improves on the additive logarithmic separation previously known and could plausibly be tight, although we are not able to prove this. We leave as an interesting open problem whether our additive hardness of approximation result could be strengthened to a multiplicative bound if the computational resources are decreased from polynomial space to the more common setting of polynomial time.},
+  eventtitle = {2015 {{IEEE}} 56th {{Annual Symposium}} on {{Foundations}} of {{Computer Science}}},
+  keywords = {Additives,Approximation methods,Complexity theory,Computer science,Dymond-Tompa game,Games,pebbling,Polynomials,PSPACE-complete,PSPACE-hardness of approximation,Raz-Mc Kenzie game,resolution depth,reversible pebbling,separation,Standards},
+  file = {/home/exaclior/Zotero/storage/45MNNWJ5/Chan et al. - 2015 - Hardness of Approximation in PSPACE and Separation.pdf}
+}
+
 @thesis{chanPebbleGamesComplexity2013,
   title = {Pebble {{Games}} and {{Complexity}}},
   author = {Chan, Siu Man},
@@ -45,6 +61,41 @@
   file = {/home/exaclior/Zotero/storage/W8IFIEVG/1977 - Correction to “Space Bounds for a Game on Graphs” .pdf}
 }
 
+@inproceedings{demaineInapproximabilityStandardPebble2017,
+  title = {Inapproximability of the {{Standard Pebble Game}} and {{Hard}} to {{Pebble Graphs}}},
+  booktitle = {Algorithms and {{Data Structures}}},
+  author = {Demaine, Erik D. and Liu, Quanquan C.},
+  editor = {Ellen, Faith and Kolokolova, Antonina and Sack, Jörg-Rüdiger},
+  date = {2017},
+  pages = {313--324},
+  publisher = {Springer International Publishing},
+  location = {Cham},
+  doi = {10.1007/978-3-319-62127-2_27},
+  abstract = {Pebble games are single-player games on DAGs involving placing and moving pebbles on nodes of the graph according to a certain set of rules. The goal is to pebble a set of target nodes using a minimum number of pebbles. In this paper, we present a possibly simpler proof of the result in~[4] and strengthen the result to show that it is PSPACE-hard to determine the minimum number of pebbles to an additive \$\$n\textasciicircum\{1/3-\textbackslash epsilon \}\$\$term for all \$\$\textbackslash epsilon {$>$} 0\$\$, which improves upon the currently known additive constant hardness of approximation~[4] in the standard pebble game. We also introduce a family of explicit, constant indegree graphs with n nodes where there exists a graph in the family such that using \$\$0{$<$} k {$<$} \textbackslash sqrt\{n\}\$\$pebbles requires \$\$\textbackslash varOmega ((n/k)\textasciicircum k)\$\$moves to pebble in both the standard and black-white pebble games. This independently answers an open question summarized in~[14] of whether a family of DAGs exists that meets the upper bound of \$\$O(n\textasciicircum k)\$\$moves using constant k pebbles with a different construction than that presented in~[1].},
+  isbn = {978-3-319-62127-2},
+  langid = {english},
+  file = {/home/exaclior/Zotero/storage/KKDU6JNP/Demaine and Liu - 2017 - Inapproximability of the Standard Pebble Game and .pdf}
+}
+
+@inproceedings{demaineRedBluePebbleGame2018,
+  title = {Red-{{Blue Pebble Game}}: {{Complexity}} of {{Computing}} the {{Trade-Off}} between {{Cache Size}} and {{Memory Transfers}}},
+  shorttitle = {Red-{{Blue Pebble Game}}},
+  booktitle = {Proceedings of the 30th on {{Symposium}} on {{Parallelism}} in {{Algorithms}} and {{Architectures}}},
+  author = {Demaine, Erik D. and Liu, Quanquan C.},
+  date = {2018-07-11},
+  series = {{{SPAA}} '18},
+  pages = {195--204},
+  publisher = {Association for Computing Machinery},
+  location = {New York, NY, USA},
+  doi = {10.1145/3210377.3210387},
+  url = {https://dl.acm.org/doi/10.1145/3210377.3210387},
+  urldate = {2024-05-12},
+  abstract = {The red-blue pebble game was formulated in the 1980s\textasciitilde\textbackslash citeHK81 to model the I/O complexity of algorithms on a two-level memory hierarchy. Given a directed acyclic graph representing computations (vertices) and their dependencies (edges), the red-blue pebble game allows sequentially adding, removing, and recoloring red or blue pebbles according to a few rules, where red pebbles represent data in cache (fast memory) and blue pebbles represent data on disk (slow, external memory). Specifically, a vertex can be newly pebbled red if and only if all of its predecessors currently have a red pebble; pebbles can always be removed; and pebbles can be recolored between red and blue (corresponding to reading or writing data between disk and cache, also called I/Os or memory transfers). Given an upper bound on the number of red pebbles at any time (the cache size), the goal is to compute a game execution with the fewest pebble recolorings (memory transfers) that finish with pebbles on a specified subset of nodes (outputs get computed). In this paper, we investigate the complexity of computing this trade-off between red-pebble limit (cache size) and number of recolorings (memory transfers) in general DAGs. First we prove this problem PSPACE-complete through an extension of the proof PSPACE-hardness of black pebbling complexity\textasciitilde\textbackslash citeGLT80. Second, we consider a natural restriction on the red-blue pebble game to forbid pebble deletions, or equivalently, forbid discarding data from cache without first writing it to disk. This assumption both simplifies the model and immediately places the trade-off computation problem within NP. Unfortunately, we show that even this restricted version is NP-complete. Finally, we show that the trade-off problem parameterized by the number of transitions is W[1]-hard, meaning that there is likely no algorithm running in a fixed polynomial for constant number of transitions.},
+  isbn = {978-1-4503-5799-9},
+  keywords = {computational complexity,external memory model,red-blue pebble game},
+  file = {/home/exaclior/Zotero/storage/H93JY3IT/Demaine and Liu - 2018 - Red-Blue Pebble Game Complexity of Computing the .pdf}
+}
+
 @online{derezendeNullstellensatzSizeDegreeTradeoffs2020,
   title = {Nullstellensatz {{Size-Degree Trade-offs}} from {{Reversible Pebbling}}},
   author = {family=Rezende, given=Susanna F., prefix=de, useprefix=true and Meir, Or and Nordström, Jakob and Robere, Robert},
@@ -59,6 +110,32 @@
   pubstate = {preprint},
   keywords = {Computer Science - Computational Complexity},
   file = {/home/exaclior/Zotero/storage/NQCDNLWA/de Rezende et al. - 2020 - Nullstellensatz Size-Degree Trade-offs from Revers.pdf}
+}
+
+@article{dinhOptimizationBasedMappersLower,
+  title = {Optimization-{{Based Mappers}} and {{Lower Bounds}} for {{Tensor Problems}}},
+  author = {Dinh, Grace},
+  langid = {english},
+  file = {/home/exaclior/Zotero/storage/LDHQY7QZ/Dinh - Optimization-Based Mappers and Lower Bounds for Te.pdf}
+}
+
+@article{fellnerGreedyPebblingProof2019,
+  title = {Greedy Pebbling for Proof Space Compression},
+  author = {Fellner, Andreas and Woltzenlogel~Paleo, Bruno},
+  date = {2019-02-01},
+  journaltitle = {International Journal on Software Tools for Technology Transfer},
+  shortjournal = {Int J Softw Tools Technol Transfer},
+  volume = {21},
+  number = {1},
+  pages = {71--86},
+  issn = {1433-2787},
+  doi = {10.1007/s10009-017-0459-0},
+  url = {https://doi.org/10.1007/s10009-017-0459-0},
+  urldate = {2024-05-12},
+  abstract = {Automated reasoning tools for the verification and synthesis of software often produce proofs to allow independent certification of the correctness of the produced solutions. As proofs can be large, this paper considers the problem of compressing proofs with respect to their space, which is approximately proportional to the memory necessary to check them. Proof checking with a small amount of available memory is analogous to playing a pebbling game with a small number of pebbles. This paper exploits this analogy and describes novel algorithms for playing a pebbling game. The sequence of moves executed in the pebbling game then corresponds to an improved topological ordering of the nodes of the proof, leading to smaller memory consumption when the proof is checked. Because the number of possible pebbling strategies and topological orderings is too large, brute-force approaches to find optimal solutions are impractical, and hence, the new pebbling algorithms proposed here are based on heuristics for finding good, though not necessarily optimal, solutions. The algorithms are evaluated on the task of compressing the space of thousands of propositional resolution proofs generated by SAT- and SMT-solvers.},
+  langid = {english},
+  keywords = {Memory consumption,Pebbling games,Proof compression,Resolution},
+  file = {/home/exaclior/Zotero/storage/RR7L4X7F/Fellner and Woltzenlogel Paleo - 2019 - Greedy pebbling for proof space compression.pdf}
 }
 
 @inproceedings{gilbertPebblingProblemComplete1979,
@@ -94,6 +171,22 @@
   file = {/home/exaclior/Zotero/storage/3RW577WS/Hopcroft et al. - 1977 - On Time Versus Space.pdf}
 }
 
+@online{jinNewToolsPeak2023,
+  title = {New {{Tools}} for {{Peak Memory Scheduling}}},
+  author = {Jin, Ce and Purohit, Manish and Svitkina, Zoya and Vee, Erik and Wang, Joshua R.},
+  date = {2023-12-20},
+  eprint = {2312.13526},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2312.13526},
+  url = {http://arxiv.org/abs/2312.13526},
+  urldate = {2024-05-12},
+  abstract = {We study scheduling of computation graphs to minimize peak memory consumption, an increasingly critical task due to the surge in popularity of large deep-learning models. This problem corresponds to the weighted version of the classical one-shot black pebbling game. We propose the notion of a dominant schedule to capture the idea of finding the ``best'' schedule for a subgraph and introduce new tools to compute and utilize dominant schedules. Surprisingly, we show that despite the strong requirements, a dominant schedule exists for any computation graph; and, moreover, that it is possible to compute the dominant schedule efficiently whenever we can find optimal schedules efficiently for a particular class of graphs (under mild technical conditions). We apply these new tools to analyze trees and series-parallel graphs. We show that the weighted one-shot black pebbling game is strongly NP-complete even when the graph is an out-tree -- or simpler still, a pumpkin, one of the simplest series-parallel graphs. On the positive side, we design a fixed-parameter tractable algorithm to find a dominant schedule (hence also a peak memory minimizing schedule) for series-parallel graphs when parameterized by the out-degree. This algorithm runs in time \$2\textasciicircum\{O(d \textbackslash log d)\} \textbackslash cdot poly(n)\$ for series-parallel graphs with \$n\$ nodes and maximum out-degree \$d\$; for pumpkins, we can improve the dependence on \$d\$ to \$O(2\textasciicircum d \textbackslash cdot poly(n))\$.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Data Structures and Algorithms},
+  file = {/home/exaclior/Zotero/storage/B8ACYWW6/Jin et al. - 2023 - New Tools for Peak Memory Scheduling.pdf;/home/exaclior/Zotero/storage/8N6BI4EI/2312.html}
+}
+
 @book{kapronLogicAutomataComputational2023,
   title = {Logic, {{Automata}}, and {{Computational Complexity}}: {{The Works}} of {{Stephen A}}. {{Cook}}},
   shorttitle = {Logic, {{Automata}}, and {{Computational Complexity}}},
@@ -124,6 +217,71 @@
   pubstate = {preprint},
   keywords = {Computer Science - Computational Complexity,Quantum Physics},
   file = {/home/exaclior/Zotero/storage/CUUU2U38/Kornerup et al. - 2024 - Tight Bounds on the Spooky Pebble Game Recycling .pdf}
+}
+
+@article{kralovicTimeSpaceComplexity2004,
+  title = {Time and Space Complexity of Reversible Pebbling},
+  author = {Královič, Richard},
+  date = {2004},
+  journaltitle = {RAIRO - Theoretical Informatics and Applications - Informatique Théorique et Applications},
+  volume = {38},
+  number = {2},
+  pages = {137--161},
+  issn = {1290-385X},
+  doi = {10.1051/ita:2004008},
+  url = {http://www.numdam.org/item/ITA_2004__38_2_137_0/},
+  urldate = {2024-05-12},
+  langid = {english},
+  file = {/home/exaclior/Zotero/storage/WPCQIQPF/Královič - 2004 - Time and space complexity of reversible pebbling.pdf}
+}
+
+@article{kralovicTimeSpaceComplexity2004a,
+  title = {Time and Space Complexity of Reversible Pebbling},
+  author = {Královič, Richard},
+  date = {2004-04},
+  journaltitle = {RAIRO - Theoretical Informatics and Applications},
+  shortjournal = {RAIRO-Theor. Inf. Appl.},
+  volume = {38},
+  number = {2},
+  pages = {137--161},
+  issn = {0988-3754, 1290-385X},
+  doi = {10.1051/ita:2004008},
+  url = {http://www.rairo-ita.org/10.1051/ita:2004008},
+  urldate = {2024-05-12},
+  abstract = {This paper investigates one possible model of reversible computations, an important paradigm in the context of quantum computing. Introduced by Bennett, a reversible pebble game is an abstraction of reversible computation that allows to examine the space and time complexity of various classes of problems. We present a technique for proving lower and upper bounds on time and space complexity for several types of graphs. Using this technique we show that the time needed to achieve optimal space for chain topology is Ω(n lg n) for infinitely many n and we discuss time-space trade-offs for chain. Further we show a tight optimal space bound for the binary tree of height h of the form h + Θ(lg∗ h) and discuss space complexity for the butterfly. These results give an evidence that reversible computations need more resources than standard computations. We also show an upper bound on time and space complexity of the reversible pebble game based on the time and space complexity of the standard pebble game, regardless of the topology of the graph.},
+  langid = {english},
+  file = {/home/exaclior/Zotero/storage/AUXGSVN3/Královič - 2004 - Time and space complexity of reversible pebbling.pdf}
+}
+
+@inproceedings{kumarEfficientRematerializationDeep2019,
+  title = {Efficient {{Rematerialization}} for {{Deep Networks}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Kumar, Ravi and Purohit, Manish and Svitkina, Zoya and Vee, Erik and Wang, Joshua},
+  date = {2019},
+  volume = {32},
+  publisher = {Curran Associates, Inc.},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2019/hash/ffe10334251de1dc98339d99ae4743ba-Abstract.html},
+  urldate = {2024-05-12},
+  abstract = {When training complex neural networks, memory usage can be an important bottleneck.  The question of when to rematerialize, i.e., to recompute intermediate values rather than retaining them in memory, becomes critical to achieving the best time and space efficiency.  In this work we consider the rematerialization problem and devise efficient algorithms that use structural characterizations of computation graphs---treewidth and pathwidth---to obtain provably efficient rematerialization schedules. Our experiments demonstrate the performance of these algorithms on many common deep learning models.},
+  file = {/home/exaclior/Zotero/storage/56QEWU5A/Kumar et al. - 2019 - Efficient Rematerialization for Deep Networks.pdf}
+}
+
+@inproceedings{kwasniewskiRedbluePebblingRevisited2019,
+  title = {Red-Blue Pebbling Revisited: Near Optimal Parallel Matrix-Matrix Multiplication},
+  shorttitle = {Red-Blue Pebbling Revisited},
+  booktitle = {Proceedings of the {{International Conference}} for {{High Performance Computing}}, {{Networking}}, {{Storage}} and {{Analysis}}},
+  author = {Kwasniewski, Grzegorz and Kabić, Marko and Besta, Maciej and VandeVondele, Joost and Solcà, Raffaele and Hoefler, Torsten},
+  date = {2019-11-17},
+  series = {{{SC}} '19},
+  pages = {1--22},
+  publisher = {Association for Computing Machinery},
+  location = {New York, NY, USA},
+  doi = {10.1145/3295500.3356181},
+  url = {https://dl.acm.org/doi/10.1145/3295500.3356181},
+  urldate = {2024-05-12},
+  abstract = {We propose COSMA: a parallel matrix-matrix multiplication algorithm that is near communication-optimal for all combinations of matrix dimensions, processor counts, and memory sizes. The key idea behind COSMA is to derive an optimal (up to a factor of 0.03\% for 10MB of fast memory) sequential schedule and then parallelize it, preserving I/O optimality. To achieve this, we use the red-blue pebble game to precisely model MMM dependencies and derive a constructive and tight sequential and parallel I/O lower bound proofs. Compared to 2D or 3D algorithms, which fix processor decomposition upfront and then map it to the matrix dimensions, it reduces communication volume by up to √ times. COSMA outperforms the established ScaLAPACK, CARMA, and CTF algorithms in all scenarios up to 12.8x (2.2x on average), achieving up to 88\% of Piz Daint's peak performance. Our work does not require any hand tuning and is maintained as an open source implementation.},
+  isbn = {978-1-4503-6229-0},
+  file = {/home/exaclior/Zotero/storage/7G9PEXXC/Kwasniewski et al. - 2019 - Red-blue pebbling revisited near optimal parallel.pdf}
 }
 
 @article{lengauerAsymptoticallyTightBounds1982,
@@ -157,6 +315,49 @@
   abstract = {This paper derives asymptotically tight bounds on the time-space tradeoffs for pebbling three different classes of directed acyclic graphs. Let N be the size of the graph, S the number of available pebbles, and T the time necessary for pebbling the graph. (a) A time space tradeoff of the form ST = θ(N2) is proved for a special class of permutation graphs which implement the bit reversal permutation. (b) A time-space tradeoff of the form T = S θ(N/S)θ(N/S) is proved for a class of graphs constructed by stacking superconcentrators in series. (c) A time-space tradeoff of the form T = S.22θ(N/S)is proved for pebbling general directed acyclic graphs.},
   isbn = {978-1-4503-7438-5},
   file = {/home/exaclior/Zotero/storage/E2Y4GEDP/Lengauer and Tarjan - 1979 - Upper and lower bounds on time-space tradeoffs.pdf}
+}
+
+@article{liReversibilityAdiabaticComputation1996,
+  title = {Reversibility and {{Adiabatic Computation}}: {{Trading Time}} and {{Space}} for {{Energy}}},
+  shorttitle = {Reversibility and {{Adiabatic Computation}}},
+  author = {Li, Ming and Vitanyi, Paul},
+  date = {1996-04-09},
+  journaltitle = {Proceedings of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences},
+  shortjournal = {Proc. R. Soc. Lond. A},
+  volume = {452},
+  number = {1947},
+  eprint = {quant-ph/9703022},
+  eprinttype = {arxiv},
+  pages = {769--789},
+  issn = {1364-5021, 1471-2946},
+  doi = {10.1098/rspa.1996.0039},
+  url = {http://arxiv.org/abs/quant-ph/9703022},
+  urldate = {2024-05-12},
+  abstract = {Future miniaturization and mobilization of computing devices requires energy parsimonious ‘adiabatic’ computation. This is contingent on logical reversibility of computation. An example is the idea of quantum computations which are reversible except for the irreversible observation steps. We propose to study quantitatively the exchange of computational resources like time and space for irreversibility in computations. Reversible simulations of irreversible computations are memory intensive. Such (polynomial time) simulations are analysed here in terms of ‘reversible’ pebble games. We show that Bennett’s pebbling strategy uses least additional space for the greatest number of simulated steps. We derive a trade-off for storage space versus irreversible erasure. Next we consider reversible computation itself. An alternative proof is provided for the precise expression of the ultimate irreversibility cost of an otherwise reversible computation without restrictions on time and space use. A time-irreversibility trade-off hierarchy in the exponential time region is exhibited. Finally, extreme timeirreversibility trade-offs for reversible computations in the thoroughly unrealistic range of computable versus noncomputable time-bounds are given.},
+  langid = {english},
+  keywords = {Computer Science - Computational Complexity,Computer Science - Computational Engineering Finance and Science,Computer Science - Data Structures and Algorithms,Quantum Physics},
+  file = {/home/exaclior/Zotero/storage/PEBGJJTL/Li and Vitanyi - 1996 - Reversibility and Adiabatic Computation Trading T.pdf}
+}
+
+@article{liReversibilityAdiabaticComputation1996a,
+  title = {Reversibility and {{Adiabatic Computation}}: {{Trading Time}} and {{Space}} for {{Energy}}},
+  shorttitle = {Reversibility and {{Adiabatic Computation}}},
+  author = {Li, Ming and Vitanyi, Paul},
+  date = {1996-04-09},
+  journaltitle = {Proceedings of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences},
+  shortjournal = {Proc. R. Soc. Lond. A},
+  volume = {452},
+  number = {1947},
+  eprint = {quant-ph/9703022},
+  eprinttype = {arxiv},
+  pages = {769--789},
+  issn = {1364-5021, 1471-2946},
+  doi = {10.1098/rspa.1996.0039},
+  url = {http://arxiv.org/abs/quant-ph/9703022},
+  urldate = {2024-05-12},
+  abstract = {Future miniaturization and mobilization of computing devices requires energy parsimonious `adiabatic' computation. This is contingent on logical reversibility of computation. An example is the idea of quantum computations which are reversible except for the irreversible observation steps. We propose to study quantitatively the exchange of computational resources like time and space for irreversibility in computations. Reversible simulations of irreversible computations are memory intensive. Such (polynomial time) simulations are analysed here in terms of `reversible' pebble games. We show that Bennett's pebbling strategy uses least additional space for the greatest number of simulated steps. We derive a trade-off for storage space versus irreversible erasure. Next we consider reversible computation itself. An alternative proof is provided for the precise expression of the ultimate irreversibility cost of an otherwise reversible computation without restrictions on time and space use. A time-irreversibility trade-off hierarchy in the exponential time region is exhibited. Finally, extreme time-irreversibility trade-offs for reversible computations in the thoroughly unrealistic range of computable versus noncomputable time-bounds are given.},
+  keywords = {Computer Science - Computational Complexity,Computer Science - Computational Engineering Finance and Science,Computer Science - Data Structures and Algorithms,Quantum Physics},
+  file = {/home/exaclior/Zotero/storage/WQCBHCVW/Li and Vitanyi - 1996 - Reversibility and Adiabatic Computation Trading T.pdf;/home/exaclior/Zotero/storage/J3RZEDSJ/9703022.html}
 }
 
 @article{liuRedBlueStandardPebble,
@@ -205,6 +406,24 @@
   pagetotal = {631},
   keywords = {Computers / Computer Science,Computers / Design Graphics & Media / Graphics Tools,Computers / Mathematical & Statistical Software,Mathematics / Discrete Mathematics,Science / Mechanics / Thermodynamics,Science / Physics / Condensed Matter,Science / Physics / General},
   file = {/home/exaclior/Zotero/storage/LGDXX2QW/Moore_Mertens_2011_The Nature of Computation.pdf}
+}
+
+@inproceedings{pappHardnessRedBluePebble2020,
+  title = {On the {{Hardness}} of {{Red-Blue Pebble Games}}},
+  booktitle = {Proceedings of the 32nd {{ACM Symposium}} on {{Parallelism}} in {{Algorithms}} and {{Architectures}}},
+  author = {Papp, Pál András and Wattenhofer, Roger},
+  date = {2020-07-09},
+  series = {{{SPAA}} '20},
+  pages = {419--429},
+  publisher = {Association for Computing Machinery},
+  location = {New York, NY, USA},
+  doi = {10.1145/3350755.3400278},
+  url = {https://dl.acm.org/doi/10.1145/3350755.3400278},
+  urldate = {2024-05-12},
+  abstract = {Red-blue pebble games model the computation cost of a two-level memory hierarchy. We present various hardness results in different red-blue pebbling variants, with a focus on the oneshot model. We first study the relationship between previously introduced red-blue pebble models (base, oneshot, nodel). We also analyze a new variant (compcost) to obtain a more realistic model of computation. We then prove that red-blue pebbling is NP-hard in all of these model variants. Furthermore, we show that in the oneshot model, a δ-approximation algorithm for δ{$<$}2 is only possible if the unique games conjecture is false. Finally, we show that greedy algorithms are not good candidates for approximation, since they can return significantly worse solutions than the optimum.},
+  isbn = {978-1-4503-6935-0},
+  keywords = {red-blue pebble game,time-memory trade-off},
+  file = {/home/exaclior/Zotero/storage/DNI5UQDD/Papp and Wattenhofer - 2020 - On the Hardness of Red-Blue Pebble Games.pdf}
 }
 
 @article{paulSpaceBoundsGame1976,
@@ -330,4 +549,21 @@
   urldate = {2024-05-12},
   abstract = {Recent research has investigated time-space tradeoffs for register allocation strategies of certain fixed sets of expressions. This paper is concerned with the time-space tradeoff for register allocation strategies of any set of expressions which compute given functions. Time-space tradeoffs for pebbling superconcentrators and grates are developed. Corollaries which follow include tradeoffs for any straight-line program which computes polynomial multiplication, polynomial convolution, the discrete Fourier transform, straight-line merging, and the computation of “most” sets of n linear functions in n indeterminates.},
   file = {/home/exaclior/Zotero/storage/XDZHKQKR/0022000080900562.html}
+}
+
+@article{yannakakisPolynomialAlgorithmMincut1985,
+  title = {A Polynomial Algorithm for the Min-Cut Linear Arrangement of Trees},
+  author = {Yannakakis, Mihalis},
+  date = {1985-10-01},
+  journaltitle = {Journal of the ACM},
+  shortjournal = {J. ACM},
+  volume = {32},
+  number = {4},
+  pages = {950--988},
+  issn = {0004-5411},
+  doi = {10.1145/4221.4228},
+  url = {https://dl.acm.org/doi/10.1145/4221.4228},
+  urldate = {2024-05-12},
+  abstract = {An algorithm is presented that finds a min-cut linear arrangement of a tree in O(n log n) time. An extension of the algorithm determines the number of pebbles needed to play the black and white pebble game on a tree.},
+  file = {/home/exaclior/Zotero/storage/HY7J5BVV/Yannakakis - 1985 - A polynomial algorithm for the min-cut linear arra.pdf}
 }

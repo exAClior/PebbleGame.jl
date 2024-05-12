@@ -105,12 +105,27 @@ also given.
 A more theory of computation related review was given in section 2 of chapter 10
 in [[cite:&kapronLogicAutomataComputational2023]].
 
-*** Approximation of answer
-- [[https://link.springer.com/chapter/10.1007/978-3-319-62127-2_27]]
-- [[https://ieeexplore.ieee.org/document/7354410]]
+*** Approximation of answer and Applications
+Now that we have a good idea of how hard the problem is and what is the best we
+could do. We are interested in what kind of approximation algorithms we could
+employ and what kind of novel applications we could do. In
+[[cite:&yannakakisPolynomialAlgorithmMincut1985]], algorithm was proposed to find
+the $MINCUT$ problem of a tree in $\mathcal{O}(n\log n)$ time. Due to it's close relation,
+this algorithm will also compute the number of pebbles needed on a black-white
+pebble game on a tree. In [[cite:&chanHardnessApproximationPSPACE2015]], it was
+shown that reversible pebbling is also PSPACE-hard. Furthermore, the
+approximation the min space result upto an addative constant is also PSAPCE-hard
+[[cite:&chanHardnessApproximationPSPACE2015;&demaineInapproximabilityStandardPebble2017]].
+In [[cite:&kumarEfficientRematerializationDeep2019]], an algorithm was given to find
+peak memory and computation length of a computation to certain bound. This is
+almost identical to the pebble game setting. In
+[[cite:&fellnerGreedyPebblingProof2019]], we see a modern presentation of converting
+the pebbling problem into a SAT problem for answer to desired complexity. The
+previous paper should be viewed in tandem with
+[[cite:&pappHardnessRedBluePebble2020]] to see how greedy algorithm fails to obtain
+optimal solution. This paper [[cite:&jinNewToolsPeak2023]] introduces dominance for
+finding the sub-optimal solution. Need to give a close look.
 
-*** TODO Next
-- https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0,5&cites=13901390982843745322&scipsc=&q=&scisbd=1
 *** Variants
 - What are their each complexity.
 - Progressive Pebble Game
@@ -142,6 +157,9 @@ What is the state of the art?
 * What remains
 - Non-line program? what are the model for
 - MCTS for solving pebble game?
+- What family of graphs does useful quantum oracles lie?
+- Even proving minimal space is hard, so space-time trade off has been left
+  blank? Why?
 
 * Appendix
 ** PSPACE
@@ -168,9 +186,14 @@ understanding much.
 Tradeoffs via Pebbling]] is about cryptography, hash-function.
 - [[http://kth.diva-portal.org/smash/get/diva2:1094244/FULLTEXT01.pdf][Proof system thesis]]: resources required for a propositional proof system and
   [[https://arxiv.org/pdf/1307.3913][paper]] , [[https://arxiv.org/pdf/1307.3913][paper2]] too.
-
+- [[https://www.sciencedirect.com/science/article/pii/S1570866708000737][Efficient evaluation of adjoint]]
 ** People
 - [[https://jakobnordstrom.se/][Jakob Nordstorm]]
+- [[https://www.hmc.edu/mathematics/people/faculty/nicholas-pippenger/][Nicholas Pippenger]]
+- [[http://htor.ethz.ch/][Torsten Hoefler]] parallel computing etc
+
+** Helpful paper
+- [[https://dl.acm.org/doi/pdf/10.1145/2779052][understand sethi]]
 * Bibliography
 ** References
    :PROPERTIES:
