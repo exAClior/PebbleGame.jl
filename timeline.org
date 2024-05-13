@@ -5,28 +5,27 @@
 #+date: today
 
 * Purpose
-Over the time of 1988 to 2004, the speed of computation has improved around 58
-percent yearly while memory bandwidth and latency have only improved 26% and 5%
-[[cite:&marchalPartPebblegameModels]]. The ever increasing gap between computation
-power and data acquisition bottlenecks actual computation. Without hardware
-improvement for data acquisition, it is desirable to optimize computational
-steps by shuffling computation order. The pebble game is a mathematical model to
-find the optimal solution for such problem.
+Memory and time are the only two scarce resource in terms of classical
+computation. It is interesting to consider how much memory is required and how
+long does it take with those given memory to perform a computation. To study
+this prolem, a mathematical model called pebbled game was proposed and developed
+over the years. We make a brief survey in this field.
 
 * Black Pebble Game
-Originally, black pebble game was introduced in
-[[cite:&sethiCompleteRegisterAllocation1973;&ComparativeSchematology]] to study the
-time-space complexity trade off of evaluating a piece of straight-line program.
-A straight-line program is one without branch or loops. A pebble game converts
-such a straight-line program into a directed acyclic graph. Gates in the program
-are represented by vertices. Vertex A has an outgoing edge into vertex B if the
-output of the gate represented by vertex A is the input of the gate represented
-by gate B. Final results of a program is represented by vertices with no
-outgoing edges. Pebbling a vertex represents computation of a gate. The goal of
-the game is to pebble all output vertices at least once each while following
-some constraints and with as few pebbles existing simultaneously as possible and
-as few pebble operations as possible. In the original pebble, there are two
-constraints for pebbling and unpebbling.
+Originally, black pebble game was implicitly introduced in
+[[cite:&ComparativeSchematology]]. Later [[cite:&sethiCompleteRegisterAllocation1973]]
+used a similar to study the time-space complexity trade-off of evaluating a
+piece of straight-line program. The name pebble game was coined in that paper.
+To differentiate it from its variants, we may also call it the *black pebble
+game*. A *straight-line program* is one without branch or loops. A *pebble game*
+converts such a straight-line program into a directed acyclic graph.
+Gates/computations in the program are represented by vertices. Vertex A has an
+outgoing edge into vertex B if the output of the gate represented by vertex A is
+the input of the gate represented by gate B. Final results of a program is
+represented by vertices with no outgoing edges. Pebbling a vertex represents
+doing a computation. The goal of the game is to pebble all output vertices at
+least once each while following some constraints. In the black pebble game,
+there are two constraints for pebbling and unpebbling.
 
 To pebble a vertex, all vertices with outgoing edge towards the vertex needs to
 be pebbled already. To unpebble a vertex, the vertex must be already pebbled.
@@ -36,23 +35,31 @@ For example, [[cite:&marchalPartPebblegameModels]] gives the pebble game setup o
 the computation $7 + (5 − z) × (1 + x) − (1 + x − t)/(2 + z) + v$ as follows
 [[file:resources/Screenshot 2024-05-09 at 20.15.04.png][pebble game example]].
 
+In this model, the question of how much memory is needed to perform a computaion
+turns into how many pebbles is needed to finish a pebble game. Much effort in
+the academic world was devote to answering related questions.
+
 ** Optimal Strategy
 It's trivial to see that the space cost is upper-bounded by the number of
 vertices in the DAG. It's interesting to find a non-trivial upper-bound. This
-corrsponds to the minimal space strategy for a pebble game.
+corrsponds to the minimal space strategy for a pebble game. Meanwhile, it is
+also interesting to find an algorithm that efficiently finds a game strategy
+that reaches this bound.
 
 *** Miminal Space Stragey
-In a series of paper
-[[cite:&sethiCompleteRegisterAllocation1973;&louiMinimumRegisterAllocation1979;&gilbertPebblingProblemComplete1980]],
-better understanding was developed on the complexity class of minimal space
-strategy. A $3-SAT$ problem can be solved by reducing it into a pebble game as
-described in [[cite:&sethiCompleteRegisterAllocation1973]]. Therefore, whether it is
-possible to play a pebble game with $k$ pebbles is an NP-complete problem.
-Conversely, the state of the art solution towards a $k$ pebble game will be
-provided by first converting the pebble game into a SAT problem and then using a
-SOTA solve for SAT problem documented in [[https://en.wikipedia.org/wiki/SAT_solver][Wikipedia]]. In order to get the minimal
-pebbles needed for the pebble game on a DAG, it was shown that it is in
-$PSPACE-complete$ complexity class
+The second question was answered first in a series of paper
+[[cite:&sethiCompleteRegisterAllocation1973;&louiMinimumRegisterAllocation1979;&gilbertPebblingProblemComplete1980]].
+It was shown that the question of whether $k$ pebbles are enough to finish a
+black pebble game is $NP-Complete$ [[cite:&sethiCompleteRegisterAllocation1973]]. An
+explicit reduction from $3-SAT$ problem to pebble game was made. The big picture
+was to represent all literals, $x_i$ and $\bar{x_{i}}$, all clauses in the
+$3-SAT$ as vertices. Extra vertices are added to represent the choice of a value
+for a given variable $x_i$. Edges are chosen such that . Conversely, the
+state of the art solution towards a $k$ pebble game will be provided by first
+converting the pebble game into a SAT problem and then using a SOTA solve for
+SAT problem documented in [[https://en.wikipedia.org/wiki/SAT_solver][Wikipedia]]. In order to get the minimal pebbles needed
+for the pebble game on a DAG, it was shown that it is in $PSPACE-complete$
+complexity class
 [[cite:&louiMinimumRegisterAllocation1979;&gilbertPebblingProblemComplete1979]].
 Finally, the question we pose at the beginning of the section was answer in
 [[cite:&hopcroftTimeSpace1977;&pippengerTimeSpaceTradeOff1978]]. A tighter
