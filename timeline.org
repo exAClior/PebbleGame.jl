@@ -1,4 +1,5 @@
-#+title: Timeline of Pebble Game for analyzing the space-time complexity of Computer Program
+#+title: Timeline of Pebble Game
+#+subtitle: For analyzing the space-time complexity of computer program
 #+author: Yusheng Zhao
 #+options: toc:nil
 #+date: today
@@ -9,18 +10,16 @@ percent yearly while memory bandwidth and latency have only improved 26% and 5%
 [[cite:&marchalPartPebblegameModels]]. The ever increasing gap between computation
 power and data acquisition bottlenecks actual computation. Without hardware
 improvement for data acquisition, it is desirable to optimize computational
-steps by shuffling computation order.
-
-The pebble game is a tool to analyze such space-time complexity of a computer
-program.
+steps by shuffling computation order. The pebble game is a mathematical model to
+find the optimal solution for such problem.
 
 * Black Pebble Game
-Originally, (black) pebble game was introduced in
-[[cite:&sethiCompleteRegisterAllocation1973]] to study the time-space complexity
-trade off of evaluating a piece of straight-line program. A straight-line
-program is one without branch or loops. A pebble game converts such a
-straight-line program into a directed acyclic graph. Gates in the program are
-represented by vertices. Vertex A has an outgoing edge into vertex B if the
+Originally, black pebble game was introduced in
+[[cite:&sethiCompleteRegisterAllocation1973;&ComparativeSchematology]] to study the
+time-space complexity trade off of evaluating a piece of straight-line program.
+A straight-line program is one without branch or loops. A pebble game converts
+such a straight-line program into a directed acyclic graph. Gates in the program
+are represented by vertices. Vertex A has an outgoing edge into vertex B if the
 output of the gate represented by vertex A is the input of the gate represented
 by gate B. Final results of a program is represented by vertices with no
 outgoing edges. Pebbling a vertex represents computation of a gate. The goal of
@@ -38,15 +37,15 @@ the computation $7 + (5 − z) × (1 + x) − (1 + x − t)/(2 + z) + v$ as foll
 [[file:resources/Screenshot 2024-05-09 at 20.15.04.png][pebble game example]].
 
 ** Optimal Strategy
-There are multiple types of optimal strategy for pebble game. We discuss them
-separately.
+It's trivial to see that the space cost is upper-bounded by the number of
+vertices in the DAG. It's interesting to find a non-trivial upper-bound. This
+corrsponds to the minimal space strategy for a pebble game.
 
 *** Miminal Space Stragey
-
 In a series of paper
 [[cite:&sethiCompleteRegisterAllocation1973;&louiMinimumRegisterAllocation1979;&gilbertPebblingProblemComplete1980]],
 better understanding was developed on the complexity class of minimal space
-strategy. A 3-SAT problem can be solved by reducing it into a pebble game as
+strategy. A $3-SAT$ problem can be solved by reducing it into a pebble game as
 described in [[cite:&sethiCompleteRegisterAllocation1973]]. Therefore, whether it is
 possible to play a pebble game with $k$ pebbles is an NP-complete problem.
 Conversely, the state of the art solution towards a $k$ pebble game will be
@@ -55,21 +54,22 @@ SOTA solve for SAT problem documented in [[https://en.wikipedia.org/wiki/SAT_sol
 pebbles needed for the pebble game on a DAG, it was shown that it is in
 $PSPACE-complete$ complexity class
 [[cite:&louiMinimumRegisterAllocation1979;&gilbertPebblingProblemComplete1979]].
-Finally, it was established that arbitrary DAG will always have a strategy using
-$\mathcal{O}(V/log(V))$ pebbles in
-[[cite:&hopcroftTimeSpace1977;&pippengerTimeSpaceTradeOff1978]].
+Finally, the question we pose at the beginning of the section was answer in
+[[cite:&hopcroftTimeSpace1977;&pippengerTimeSpaceTradeOff1978]]. A tighter
+upper-bound for the pebbles is $V/\log(V)$ where $V$ is the number of vertices
+in the DAG.
 
 In conclusion, we now understand that asking about the minimal space for
 carrying out a computation is hard, $PSAPCE-complete$ hard. Nevertheless, there
 are three areas un-explored. Firstly, the complexity conclusion was towards a
 DAG with no structure. We could expect more efficient solution when the circuit,
 hence the DAG, has some structure. For example, when the computation being
-carried out is FFT, the DAG could be dividied into identical completely balanced
-binary trees. [[cite:&ModelsComputationExploring]]. Secondly, we may trade space for
-time during computation [[cite:&gilbertPebblingProblemComplete1979]]. For example,
-by giving one extra pebble you may save much running time. Lastly, operations
-allowed in this model is limited and it corresponds to irreversible and
-straight-line programs. Are there any variants of pebble games that could be
+carried out is $FFT$, the DAG could be dividied into identical completely
+balanced binary trees [[cite:&ModelsComputationExploring]]. Secondly, we may trade
+space for time during computation [[cite:&gilbertPebblingProblemComplete1979]]. For
+example, by giving one extra pebble you may save much running time. Lastly,
+operations allowed in this model is limited and it corresponds to irreversible
+and straight-line programs. Are there any variants of pebble games that could be
 used to analyze other computational models?
 
 *** DAG with structure
