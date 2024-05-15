@@ -8,6 +8,7 @@ long does it take with those given memory to perform a computation. To study
 this prolem, a mathematical model called pebbled game was proposed and developed
 over the years. We make a brief survey in this field.
 
+
 # Black Pebble Game
 
 Originally, black pebble game was implicitly introduced in
@@ -58,28 +59,30 @@ was to represent all literals, $x_i$ and $\bar{x_{i}}$, all clauses in the
 $3-SAT$ as vertices. Extra vertices are added to represent the choice of a value
 for a given variable $x_i$. Edges are chosen such that vertices representing the
 clauses are connected to corresponding literals to represent choosing the value
-for a literal. Conversely, the state of the art solution towards a $k$ pebble
-game will be provided by first converting the pebble game into a SAT problem and
-then using a SOTA solve for SAT problem documented in [Wikipedia](https://en.wikipedia.org/wiki/SAT_solver). In order to get
-the minimal pebbles needed for the pebble game on a DAG, it was shown that it is
-in $PSPACE-complete$ complexity class
+for a literal. Following this, researchers proved the general problem of finding
+the inimal number of pebbles for an general DAG is $PSPACE-complete$
 <cite:&louiMinimumRegisterAllocation1979;&gilbertPebblingProblemComplete1979>.
-Finally, the question we pose at the beginning of the section was answer in
-<cite:&hopcroftTimeSpace1977;&pippengerTimeSpaceTradeOff1978>. A tighter
-upper-bound for the pebbles is $V/\log(V)$ where $V$ is the number of vertices
-in the DAG.
+Around the same time, it was shown that a lower upper-bound for the pebbled
+needed is $V / \log(V)$ where $V$ is the number of vertices in the DAG
+<cite:&hopcroftTimeSpace1977>. This upper-bound was proven to be tight in the
+sense that some DAG requires this many pebbles
+<cite:&pippengerTimeSpaceTradeOff1978>. Incidentially, this is also the
+lower-bound in the sense that we could always construct a DAG with $V$ vertices
+that requires $c_5 V / \log(V)$ pebbles.
 
 In conclusion, we now understand that asking about the minimal space for
 carrying out a computation is hard, $PSAPCE-complete$ hard. Nevertheless, there
 are three areas un-explored. Firstly, the complexity conclusion was towards a
-DAG with no structure. We could expect more efficient solution when the circuit,
-hence the DAG, has some structure. For example, when the computation being
-carried out is $FFT$, the DAG could be dividied into identical completely
-balanced binary trees <cite:&ModelsComputationExploring>. Secondly, we may trade
-space for time during computation <cite:&gilbertPebblingProblemComplete1979>. For
-example, by giving one extra pebble you may save much running time. Lastly,
-operations allowed in this model is limited and it corresponds to irreversible
-and straight-line programs. Are there any variants of pebble games that could be
+DAG with no structure. We could expect algorithm that is more efficient thant
+$PSPACE -complete$ when the circuit, hence the DAG, has some structure. For
+example, when the computation being carried out is $FFT$, the DAG could be
+dividied into identical completely balanced binary trees
+<cite:&ModelsComputationExploring>. Indeed, there were efficient algorithms for
+computing the optimal pebbling strategy. Secondly, we may trade space for time
+during computation <cite:&gilbertPebblingProblemComplete1979>. For example, by
+giving one extra pebble you may save much running time. Lastly, operations
+allowed in this model is limited and it corresponds to irreversible and
+straight-line programs. Are there any variants of pebble games that could be
 used to analyze other computational models?
 
 
@@ -125,7 +128,7 @@ Now that we have a good idea of how hard the problem is and what is the best we
 could do. We are interested in what kind of approximation algorithms we could
 employ and what kind of novel applications we could do. In
 <cite:&yannakakisPolynomialAlgorithmMincut1985>, algorithm was proposed to find
-the $MINCUT$ problem of a tree in $\mathcal{O}(n\log n)$ time. Due to it&rsquo;s close relation,
+the $MINCUT$ problem of a tree in $\mathcal{O}(V\log V)$ time. Due to it&rsquo;s close relation,
 this algorithm will also compute the number of pebbles needed on a black-white
 pebble game on a tree. In <cite:&chanHardnessApproximationPSPACE2015>, it was
 shown that reversible pebbling is also PSPACE-hard. Furthermore, the
@@ -169,14 +172,68 @@ finding the sub-optimal solution. Need to give a close look.
 
 # Reversible Pebble Game
 
-What is the state of the art?
-What is the con
+A good reference for development in relation to energy trade-off is given in
+<cite:&vitanyiTimeSpaceEnergy2005>. What is the state of the art? What is the con
+
+Seems like most work are focused on simulating irreversible function reversible
+and studying the time-space complexity of doing so
+<cite:&brodskyReversibleCircuitRealizations2004>.
+
+The result of bennett&rsquo;s bound is not tight and tightened by
+<cite:&levineNoteBennettTimeSpace1990a>.
+
+The first paper that proposes the use of a reversible pebble game in quantum
+circuit compilation is <cite:&meuliReversiblePebblingGame2019>. It wanted to
+fill-in the gap in tools that automatically optimize quantum circuit space-time
+complexity on the algorithm/oracle level. Previously, there are work that does
+exact synthesis of a single
+gate<cite:&kliuchnikovFastEfficientExact2013;&soekenProgrammingQuantumComputers2018>.
+Such optimization lacks the information of the entire algorithm hence is not
+optimal globally. There are also work that focuses on compiling a better circuit
+with fewer target gates such as CNOT
+<cite:&amyControlledNOTComplexityControlledNOT2018;&meuliSATbasedCNOTQuantum2018>.
+But they do not consider optimizing ancillas at the same time. The paper
+<cite:&namAutomatedOptimizationLarge2018> has a comparision of previous
+optimization schemes. Nevertheless, this paper produced incorrec results
+<cite:&hietalaVerifiedOptimizerQuantum2021> they probably human-made the
+optimization via component substitution.
+
+This paper is purely engineering<cite:&meuliReversiblePebblingGame2019>. Based on
+the fact that fix-pebble pebble game is $NP-Complete$ and the optimal pebble
+game is $PSPACE-complete$. It used an $SAT$ solver to obtain result for the
+first question and looped over a range of pebble numbers to find optimal
+solution. Many of the relevant reference of this paper is by the authors
+themselves.
+
+The propose method for space-time complexity problem was further expanded in
+<cite:&BooleanSatisfiabilityQuantum;&paradisReqompSpaceconstrainedUncomputation2024;&meuliXorAndInverterGraphsQuantum2022>
+
+What was the motivation of each work? what gap did they fill-in? How did they
+comment on the previous paper ?
 
 
 # Spooky Pebble Game
 
-Why this?
-What is the state of the art?
+The main source fo this section is <cite:&kornerupTightBoundsSpooky2024>. It
+starts with recognizing the prosposal of paper
+<cite:&sethiCompleteRegisterAllocation1973>. It then mentioned the usecase of
+black-pebble game in <cite:&hopcroftTimeSpace1977> in proving turing machine with
+running time $T(n)$ can be simulated by a limited space turing machine of space
+$T(n)/log(T(n))$ hence proving the $PSPACE-completeness$. Then it went straight
+to providing the space-time trade off of particular application like matrix
+multiplication <cite:&tompaTimespaceTradeoffsComputing1980> and hashing functions
+without giving much motivation. An abrupt transition into reversible pebble for
+considering reversible computation was given
+<cite:&bennettTimeSpaceTradeOffs1989>. A more recent progress on reversible pebble
+game was introduced but it was related to cryptography
+<cite:&blockiParallelReversiblePebbling2022>.
+
+Then the paper introduced spooky pebble game <cite:&SpookyPebbleGamesa> by Gidney
+without giving the reason why this variant was developed. This gap was filled by
+<cite:&meuliReversiblePebblingGame2019>.
+
+Why this? What is the state of the
+art?
 
 
 # What remains
@@ -243,4 +300,12 @@ Tradeoffs via Pebbling]] is about cryptography, hash-function.
 
 
 [bibliography:./pebblegame.bib](bibliography:./pebblegame.bib)
+
+
+# Improve
+
+-   What other people improve, why they imporve, see their comments&#x2026;.
+-   What about quantum, what they are doing?
+-   pick a paper with best algo ( most intersint ), understand and (implemnt)
+-   find something I could improve
 

@@ -167,8 +167,33 @@ The result of bennett's bound is not tight and tightened by
 [[cite:&levineNoteBennettTimeSpace1990a]].
 
 
-The first paper that proposes the use of a reversible pebble game is
-[[cite:&meuliReversiblePebblingGame2019]]. Motivation, why previous methods failed? Method? Outstanding question?
+The first paper that proposes the use of a reversible pebble game in quantum
+circuit compilation is [[cite:&meuliReversiblePebblingGame2019]]. It wanted to
+fill-in the gap in tools that automatically optimize quantum circuit space-time
+complexity on the algorithm/oracle level. Previously, there are work that does
+exact synthesis of a single
+gate[[cite:&kliuchnikovFastEfficientExact2013;&soekenProgrammingQuantumComputers2018]].
+Such optimization lacks the information of the entire algorithm hence is not
+optimal globally. There are also work that focuses on compiling a better circuit
+with fewer target gates such as CNOT
+[[cite:&amyControlledNOTComplexityControlledNOT2018;&meuliSATbasedCNOTQuantum2018]].
+But they do not consider optimizing ancillas at the same time. The paper
+[[cite:&namAutomatedOptimizationLarge2018]] has a comparision of previous
+optimization schemes. Nevertheless, this paper produced incorrec results
+[[cite:&hietalaVerifiedOptimizerQuantum2021]] they probably human-made the
+optimization via component substitution.
+
+
+This paper is purely engineering[[cite:&meuliReversiblePebblingGame2019]]. Based on
+the fact that fix-pebble pebble game is $NP-Complete$ and the optimal pebble
+game is $PSPACE-complete$. It used an $SAT$ solver to obtain result for the
+first question and looped over a range of pebble numbers to find optimal
+solution. Many of the relevant reference of this paper is by the authors
+themselves.
+
+The afore-mentioned method was further utilized in
+[[cite:&BooleanSatisfiabilityQuantum;&paradisReqompSpaceconstrainedUncomputation2024;&meuliXorAndInverterGraphsQuantum2022]].
+
 
 * Spooky Pebble Game
 The main source fo this section is [[cite:&kornerupTightBoundsSpooky2024]]. It
