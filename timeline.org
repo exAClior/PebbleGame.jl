@@ -156,13 +156,42 @@ For modeling reversible computing.
 For modeling non-deterministic computing.
 
 * Reversible Pebble Game
-What is the state of the art?
-What is the con
+A good reference for development in relation to energy trade-off is given in
+[[cite:&vitanyiTimeSpaceEnergy2005]]. What is the state of the art? What is the con
 
+Seems like most work are focused on simulating irreversible function reversible
+and studying the time-space complexity of doing so
+[[cite:&brodskyReversibleCircuitRealizations2004]].
+
+The result of bennett's bound is not tight and tightened by
+[[cite:&levineNoteBennettTimeSpace1990a]].
+
+
+The first paper that proposes the use of a reversible pebble game is
+[[cite:&meuliReversiblePebblingGame2019]]. Motivation, why previous methods failed? Method? Outstanding question?
 
 * Spooky Pebble Game
-Why this?
-What is the state of the art?
+The main source fo this section is [[cite:&kornerupTightBoundsSpooky2024]]. It
+starts with recognizing the prosposal of paper
+[[cite:&sethiCompleteRegisterAllocation1973]]. It then mentioned the usecase of
+black-pebble game in [[cite:&hopcroftTimeSpace1977]] in proving turing machine with
+running time $T(n)$ can be simulated by a limited space turing machine of space
+$T(n)/log(T(n))$ hence proving the $PSPACE-completeness$. Then it went straight
+to providing the space-time trade off of particular application like matrix
+multiplication [[cite:&tompaTimespaceTradeoffsComputing1980]] and hashing functions
+without giving much motivation. An abrupt transition into reversible pebble for
+considering reversible computation was given
+[[cite:&bennettTimeSpaceTradeOffs1989]]. A more recent progress on reversible pebble
+game was introduced but it was related to cryptography
+[[cite:&blockiParallelReversiblePebbling2022]].
+
+Then the paper introduced spooky pebble game [[cite:&SpookyPebbleGamesa]] by Gidney
+without giving the reason why this variant was developed. This gap was filled by
+[[cite:&meuliReversiblePebblingGame2019]].
+
+
+Why this? What is the state of the
+art?
 
 * What remains
 - Non-line program? what are the model for
