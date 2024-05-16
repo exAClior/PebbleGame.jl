@@ -11,6 +11,9 @@ long does it take with those given memory to perform a computation. To study
 this prolem, a mathematical model called pebbled game was proposed and developed
 over the years. We make a brief survey in this field.
 
+What is the part of quantum algorithm that requires the result of classical
+computation. In other words, show them the ORACLE.
+
 * Black Pebble Game
 Originally, black pebble game was implicitly introduced in
 [[cite:&ComparativeSchematology]]. Later [[cite:&sethiCompleteRegisterAllocation1973]]
@@ -210,13 +213,12 @@ considering reversible computation was given
 game was introduced but it was related to cryptography
 [[cite:&blockiParallelReversiblePebbling2022]].
 
-Then the paper introduced spooky pebble game [[cite:&SpookyPebbleGamesa]] by Gidney
-without giving the reason why this variant was developed. This gap was filled by
-[[cite:&meuliReversiblePebblingGame2019]].
+Then the paper introduced spooky pebble game [[cite:&SpookyPebbleGamesa]] by Gidney.
+It was motivated for use intermediate measurements to reduce qubit cost.
+Although the total number of pebbles, ones representing classical register and
+quantum register, remains the same.
 
 
-Why this? What is the state of the
-art?
 
 * What remains
 - Non-line program? what are the model for
