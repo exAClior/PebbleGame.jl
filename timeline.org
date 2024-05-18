@@ -226,6 +226,11 @@ quantum register, remains the same.
 - What family of graphs does useful quantum oracles lie?
 - Even proving minimal space is hard, so space-time trade off has been left
   blank? Why?
+* Improve
+- What other people improve, why they imporve, see their comments....
+- What about quantum, what they are doing?
+- pick a paper with best algo ( most intersint ), understand and (implemnt)
+- find something I could improve
 
 * Appendix
 ** PSPACE
@@ -269,8 +274,3 @@ Tradeoffs via Pebbling]] is about cryptography, hash-function.
    [[bibliography:./pebblegame.bib][bibliography:./pebblegame.bib]]
 
 
-* Improve
-- What other people improve, why they imporve, see their comments....
-- What about quantum, what they are doing?
-- pick a paper with best algo ( most intersint ), understand and (implemnt)
-- find something I could improve
