@@ -218,6 +218,27 @@ It was motivated for use intermediate measurements to reduce qubit cost.
 Although the total number of pebbles, ones representing classical register and
 quantum register, remains the same.
 
+** Complexity
+With $h$ depth tree, we have $n = 2^{h}-1$ nodes. The minimum number of pebbles
+used is $h+1$ while the time step is $\mathcal{O}(n \log{n})$.
+
+** Algorithm
+- Ghosting gate: $G$ gate is hadamard, measure then classical controlled not. It
+  is used to free qubits by moving information into phase. Change from previous,
+  $b$ now records measurement value of a few qubits, they will rarely be all zero.
+- $E_{f}$ gate: $U_{f}$ to recompute, then classically controlled z gate to
+  uncompute phase. used to uncompute the phase introduced by ghosting.
+
+*** Short Comming
+
+"Because the uncomputed qubit is a function of other qubits in the computational
+basis, measuring it in the X basis will generate one bit of entropy. The
+measurement has a 50/50 random result. This means that, when uncomputing a
+single qubit, half of the time you don't have to do anything and half of the
+time you do the work that's slightly easier than the work you'd have had to if
+uncomputing by exactly reversing the computation. (When uncomputing large
+multi-qubit registers, the benefit may be less because the chance of having to
+do nothing becomes exponentially small.)" [[cite:&zotero-11571]].
 
 
 * What remains
