@@ -1,10 +1,14 @@
 using PebbleGame
 using Documenter
+using DocumenterCitations
 
 DocMeta.setdocmeta!(PebbleGame, :DocTestSetup, :(using PebbleGame); recursive=true)
 
+bib = CitationBibliography(joinpath(@__DIR__,"src/reference.bib"),style=:authoryear)
+
 makedocs(;
     modules=[PebbleGame],
+    plugins = [bib],
     authors="Yusheng Zhao <yushengzhao2020@outlook.com> and contributors",
     sitename="PebbleGame.jl",
     format=Documenter.HTML(;
@@ -14,6 +18,8 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "Theory" => "theory.md",
+        "Suggested Readings and References" => "reference.md"
     ],
 )
 
