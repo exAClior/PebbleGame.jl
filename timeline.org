@@ -30,7 +30,8 @@ doing a computation. The goal of the game is to pebble all output vertices at
 least once each while following some constraints. In the black pebble game,
 there are two constraints for pebbling and unpebbling.
 
-To pebble a vertex, all vertices with outgoing edge towards the vertex needs to
+To pebble a vertex, all vertices with outg
+oing edge towards the vertex needs to
 be pebbled already. To unpebble a vertex, the vertex must be already pebbled.
 The vertices representing the inputs can be pebbled with no constraint.
 
