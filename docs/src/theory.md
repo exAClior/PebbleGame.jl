@@ -114,14 +114,32 @@ pebbling. Unbounded in-degree means a non-leaf vertex is computed with at most
 unlimited number of inputs. One-shot rule means any vertex can be pebbled at
 most once.
 
+The original proof in [^1] consists of an explicit reduction from 3-SAT problem
+to pebbling game. We will give a more hand waving proof using that fact that
+$k$-color problem is NP-Complete when $k > 2$. 
+
+Furthermore, any $DAG$ that can be pebbled with 2 pebbles is very boring, we
+conclude that unbounded in-degree version of one-shot standard pebble game is
+NP-Complete.
+
 
 ### General Version
 
-The number of steps for pebbling is not necessarily polynomially bounded. [^5][^6]
+The next step is to consider whether unbounded in-degree standard pebble game
+allowing re-computation is NP-Complete or not. Unfortunately, as shown in
+reference [^5] and [^6] The number of steps for pebbling is not necessarily
+polynomially bounded. 
+
+In [^6], a set of graphs $\{G\}$ which is degree-$2$ acyclic directed graph are
+constructed. It was shown that the space-optimal pebbling strategy take
+$\mathcal{O}(2^{\sqrt{n}})$ time where $n$ is the number of vertices in $G$.
+
+
 Needs example.
 
-### Variants and Complexity
+Furthermore, it is shown to be PSPACE-Complete [^5].
 
+### Variants and Complexity
 
 There are other variants of the standard pebble game which corresponds to other
 computational models like reversible computation. A good place to start for
