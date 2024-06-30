@@ -11,6 +11,13 @@ characters. For example, $\{0,1\}$ is the binary alphabet. [^2]
   if for all $I \in L$, $P(I)$ returns *yes* and for all $I \notin L$, $P(I)$
   either is *undefined* ro $P(I)$ return *no*.
 
+**RECHEABILITY:**  [^3]
+
+**SPACE(f(n)):** [^3] A complexity class with restricted amount of space resource.
+
+**Savitch's Theorem** [^3] A theorem proving $\textbf{NPSAPCE}=\textbf{PSPACE}$. The reduction
+overhead is square.
 
 [^1]: [savage1998models](@cite)
 [^2]: [maccormick2018can](@cite)
+[^3]: [NoC](@cite)

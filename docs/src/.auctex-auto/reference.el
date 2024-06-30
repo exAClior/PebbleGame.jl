@@ -5,7 +5,7 @@
     "Sethi1973"
     "savage1998models"
     "Liu2017RedblueAS"
-    "10.5555/2086753"
+    "NoC"
     "maccormick2018can"
     "doi:10.1137/0201002"
     "Tarjan1978"

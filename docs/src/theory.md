@@ -115,8 +115,12 @@ unlimited number of inputs. One-shot rule means any vertex can be pebbled at
 most once.
 
 The original proof in [^1] consists of an explicit reduction from 3-SAT problem
-to pebbling game. We will give a more hand waving proof using that fact that
-$k$-color problem is NP-Complete when $k > 2$. 
+to pebbling game. The $3$-SAT problem is defined with $m$ clauses and $n$
+variables.
+
+Triangle nodes first, then initial node, then 
+
+You will need 
 
 Furthermore, any $DAG$ that can be pebbled with 2 pebbles is very boring, we
 conclude that unbounded in-degree version of one-shot standard pebble game is
@@ -139,6 +143,26 @@ Needs example.
 
 Furthermore, it is shown to be PSPACE-Complete [^5].
 
+A more intuition based proof is this. We know that [**RECHEABILITY**](@ref
+glossary) is $NL-COMPLETE$ [^2]. This is because all you need to store in the
+limited memory is current vertex. For a graph with $n$ vertices, this only needs
+$\mathcal{O}(log(n))$ amount of space. The input of the problem is
+$\mathcal{O}(n^2)$ adjacency matrix of the graph. And some more rigorous proof
+will be needed to show that all other $NL$ problems can be reduced to it.
+
+Intuitively, pebbling game is [**NPSPACE-Complete:**](@ref glossary) because
+it's input is a a computation graph of $n$ vertices with constant size of pebble
+rule. But the actual graph you perform **REACHABILITY** is of size $2^n$. We
+know the **REACHABILITY** question on a graph of size $n$ is in **NL-Complete**
+with respect to input size $n$, therefore pebbling game is in
+**NPSPACE-Complete** with respcect to input size $n$ [^2]. Furthermore, by
+[Savitch's theorem](@ref glossary), we know standard pebbling game is also
+**PSPACE-Complete**.
+
+Whether the standard pebble game is as hard as one-shot standard pebble game is
+upto debate because it reduces to the problem of $\textbf{NP} \stackrel{?}{=} \textbf{PSPACE}$.
+This is an unknown problem [^2].
+
 ### Variants and Complexity
 
 There are other variants of the standard pebble game which corresponds to other
@@ -158,18 +182,17 @@ For the sake of convinence, we copy the table that contains complexity class kno
 |Red-Blue (no deletion) | NP-complete [Thm 3.1] | NP-complete [Thm 3.1] | ? | ? |
 
 
-2. Why is it a PSPACE Complete problem?
 3. What is the rigorous difference between NP-Complete and PSPACE-Complete problems? Why are we not certain that PSPACE-Complete problems are not equal to NP-Complete? [Ref1](https://www.quora.com/What-makes-any-NP-complete-problem-a-PSPACE-complete-problem-in-the-complexity-theory-field#:~:text=Every%20problem%20in%20NP%20is,problems%20are%20also%20PSPACE%2Dcomplete.) , [Ref2](https://cs.stackexchange.com/questions/43723/what-is-practical-difference-between-np-and-pspace-complete).
 
 
 4. Eventually, we would like to know from the complexity class of this problem whether tree-width related algorithms can help with solving our problem.
 
-5. 
-
-
 [^1]: [Sethi1973](@cite)
-[^2]: [10.5555/2086753](@cite)
+[^2]: [NoC](@cite)
 [^3]: [Liu2017RedblueAS](@cite)
 [^4]: [doi:10.1137/0201002](@cite)
 [^5]: [Tarjan1978](@cite)
 [^6]: [10.1145/800135.804418](@cite)
+
+
+<!-- https://www.cs.toronto.edu/~toni/Papers/treewidth.pdf -->
