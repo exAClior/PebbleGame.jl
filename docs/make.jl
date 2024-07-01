@@ -26,5 +26,4 @@ makedocs(;
 
 deploydocs(;
     repo="github.com/exAClior/PebbleGame.jl",
-    devbranch="main",
 )
