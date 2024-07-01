@@ -18,6 +18,7 @@ characters. For example, $\{0,1\}$ is the binary alphabet. [^2]
 **Savitch's Theorem** [^3] A theorem proving $\textbf{NPSAPCE}=\textbf{PSPACE}$. The reduction
 overhead is square.
 
+
 [^1]: [savage1998models](@cite)
 [^2]: [maccormick2018can](@cite)
 [^3]: [NoC](@cite)

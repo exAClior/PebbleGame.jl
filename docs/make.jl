@@ -19,6 +19,7 @@ makedocs(;
     pages=[
         "Home" => "index.md",
         "Theory" => "theory.md",
+        "Uniformity" => "uniformity.md",
         "Glossary" => "glossary.md",
         "Suggested Readings and References" => "reference.md"
     ],
