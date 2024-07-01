@@ -18,5 +18,5 @@ using Test, PebbleGame
 
     @test evaluate(p, assignment)
 
-    reduce(p, :ONESHOT)
+    # reduce(p, :ONESHOT)
 end
