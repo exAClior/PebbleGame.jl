@@ -18,6 +18,15 @@ characters. For example, $\{0,1\}$ is the binary alphabet. [^2]
 **Savitch's Theorem** [^3] A theorem proving $\textbf{NPSAPCE}=\textbf{PSPACE}$. The reduction
 overhead is square.
 
+## Bennett's Series
+
+**Instantaneous Description:** The state of a Turing Machine at an instance
+during the process of computation.
+
+## Modulo Arithmetic
+
+**Residue Number Arithmetic:** A numerical system representing integers by their
+value modulo by a series of pairwise coprime number.
 
 [^1]: [savage1998models](@cite)
 [^2]: [maccormick2018can](@cite)
